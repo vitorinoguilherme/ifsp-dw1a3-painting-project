@@ -1,50 +1,70 @@
 class User {
-
     constructor() {
         this.inName = document.getElementById("inName");
+        this.inDesenho = document.getElementById("inDesenho");
         this.inEmail = document.getElementById("inEmail");
         this.inPassword = document.getElementById("inPassword");
+
+        this.userLocalStorage();
     }
    
+    // Validação para os dados de entrada fornecidos pelo usuário.
+    validacaoInputs(input) {
+        if (input.value == null || input.value == "") {
+            alert(`Erro 422: "${input.name}" dados inválidos. `)
+            input.focus();
+        } else {
+            return input.value;
+        }
+    }
+
     get inName() {
         return this._inName;
     }
 
-    set inName(name) {
-        if (name.value == null) {
-            alert("Entre com um nome válido.")
-            name.focus();
-        } else {
-            this._inName = name.value;
-        }
+    set inName(input) {
+        var inputValidado = this.validacaoInputs(input);
+        this._inName = inputValidado;
     }
 
-    
+    get inDesenho() {
+        return this._inDesenho;
+    }
+
+    set inDesenho(input) {
+        var inputValidado = this.validacaoInputs(input);
+        this._inDesenho = inputValidado;
+    }
+
     get inEmail() {
         return this._inEmail;
     }
 
-    set inEmail(email) {
-        if (email.value == null) {
-            alert("Entre com um email válido.");
-            email.focus();
-        } else {
-            this._inEmail = email.value;
-        }
+    set inEmail(input) {
+        var inputValidado = this.validacaoInputs(input);
+        this._inEmail = inputValidado;
     }
 
-    
     get inPassword() {
         return this._inPassword;
     }
 
-    set inPassword(password) {
-        if (password.value == null) {
-            alert("Entre com uma senha válida.")
-            password.focus();
-        } else {
-            this._inPassword = password.value;
-        }
+    set inPassword(input) {
+        var inputValidado = this.validacaoInputs(input);
+        this._inPassword = inputValidado;
+    }
+
+    toString() {
+        return `\n\tName: ${this.inName}
+                \n\tDesenho: ${this.inDesenho}
+                \n\tEmail: ${this.inEmail}`
+    }
+
+    // Função para salvar dados de usuário no localStorage
+    // Dados recuperados na página após o login.
+    userLocalStorage() {
+        window.localStorage.setItem('username', this.inName);
+        window.localStorage.setItem('desenho', this.inDesenho);
     }
  
 }
@@ -81,8 +101,6 @@ class UserStorage {
                 window.localStorage.setItem('accounts', this.listUsers);
             }
         }
-        
-
     }
 }
 
