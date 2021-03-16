@@ -7,13 +7,12 @@ class Account {
     authentication() {
         // TEST
         var userStorage = window.localStorage.getItem('accounts');
-        alert(userStorage);
         
         var checkEmail = userStorage.search(this.inEmail.value);
         var checkPassword = userStorage.search(this.inPassword.value);
 
         if (checkEmail & checkPassword) {
-            window.location.href = "../index.html";
+            window.location.href = "/html/user.html";
         }
     }
 }
