@@ -66,7 +66,6 @@ class User {
         window.localStorage.setItem('username', this.inName);
         window.localStorage.setItem('desenho', this.inDesenho);
     }
- 
 }
 
 class UserStorage {
