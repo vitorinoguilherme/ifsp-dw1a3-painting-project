@@ -14,6 +14,29 @@ class UserLogged {
     }
 }
 
+function openModal(image) {
+    
+    $('#exampleModalCenter').on('show.bs.modal', function() {
+        $('.img-fluid').attr('src', image);
+    })
+}
+
 window.addEventListener('load', ()=>{
     new UserLogged().loadUser();
+
+    document.getElementById("picture4").addEventListener('click', ()=>{
+        var image = document.getElementById("picture4");
+        openModal(image.src);
+    })
+
+    document.getElementById("picture6").addEventListener('click', ()=>{
+        var image = document.getElementById("picture6");
+        openModal(image.src);
+        
+    })
+
+    document.getElementById("picture7").addEventListener('click', ()=>{
+        var image = document.getElementById("picture7");
+        openModal(image.src);
+    })
 })

@@ -7,19 +7,31 @@
     width: 100%;
 }
 
-.img-thumbnail {
+.media {
     height: 200px;
     border: 2px solid;
+    border-radius: 8px;
 }
-
-.img-thumbnail > img {
+.media-left {
     height: 100%;
     width: 100%;
-    padding: 12px 3px;
+    
 }
 
-.img-thumbnail > p {
-    display: flex;
-
+.media-left > img {
+    height: 100%;
+    width: 100%;
+    
 }
+
+
+#posts {
+   float: right;
+}
+
+#posts svg {
+    margin: 10px;
+}
+
+
 
