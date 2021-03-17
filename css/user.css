@@ -6,3 +6,20 @@
     height: 100%;
     width: 100%;
 }
+
+.img-thumbnail {
+    height: 200px;
+    border: 2px solid;
+}
+
+.img-thumbnail > img {
+    height: 100%;
+    width: 100%;
+    padding: 12px 3px;
+}
+
+.img-thumbnail > p {
+    display: flex;
+
+}
+
