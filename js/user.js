@@ -1,6 +1,7 @@
 class UserLogged {
     constructor() {
         this.pOutUser__logged = document.getElementById("pUser__logged");
+        this.spanOutUser__logged = document.getElementById("spanOutUser__logged");
     }
 
     loadUser() {
@@ -11,6 +12,10 @@ class UserLogged {
                         ${desenho}<br>`
 
         this.pOutUser__logged.innerHTML = response;
+
+        response = `${username}`
+
+        this.spanOutUser__logged.innerHTML = response;
     }
 }
 
