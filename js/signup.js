@@ -111,9 +111,11 @@ window.addEventListener('load', ()=>{
         var user = new User();
         
         userStorage.register(user);
-        var baseUrl = document.getElementById("myBase").href;
-        alert(baseUrl)
-        window.location.href = `${baseUrl}/html/signin.html`;
+        var base_url = `//${document.location.host}/painting-project/`;
+
+        alert(base_url);
+        window.location.href = `${base_url}/html/signin.html`;
+        
     })
 
 })
