@@ -111,7 +111,7 @@ window.addEventListener('load', ()=>{
         var user = new User();
         
         userStorage.register(user);
-        window.location.href = "/html/signin.html";
+        window.location.href = "html/signin.html";
     })
 
 })
