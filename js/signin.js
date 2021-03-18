@@ -15,7 +15,6 @@ class Account {
             var base_url = `//${document.location.host}/painting-project`;
 
             window.location.href = `${base_url}/html/user.html`;
-            alert(`${base_url}/html/user.html`)
         }
     }
 }
