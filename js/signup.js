@@ -111,7 +111,8 @@ window.addEventListener('load', ()=>{
         var user = new User();
         
         userStorage.register(user);
-        window.location.href = "html/signin.html";
+        var baseUrl = document.getElementById("myBase").href;
+        window.location.href = `${baseUrl}/html/signin.html`;
     })
 
 })
