@@ -113,7 +113,6 @@ window.addEventListener('load', ()=>{
         userStorage.register(user);
         var base_url = `//${document.location.host}/painting-project/`;
 
-        alert(base_url);
         window.location.href = `${base_url}/html/signin.html`;
         
     })

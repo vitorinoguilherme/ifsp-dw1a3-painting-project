@@ -12,7 +12,9 @@ class Account {
         var checkPassword = userStorage.search(this.inPassword.value);
 
         if (checkEmail & checkPassword) {
-            window.location.href = "/html/user.html";
+            var base_url = `//${document.location.host}/painting-project/`;
+
+            window.location.href = `${base_url}/html/user.html`;
         }
     }
 }
