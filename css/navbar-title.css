@@ -1,0 +1,9 @@
+@media only screen and (min-width: 360px) and (max-width: 486px) {
+    #title, #logo {
+        display: block;
+        font-size: auto;
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+}
+
