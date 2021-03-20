@@ -9,7 +9,7 @@ class UserLogged {
         var desenho = window.localStorage.getItem('desenho');
 
         var response = `${username}<br>
-                        ${desenho}<br>`
+                        <span style="font-family: 'Brush Script MT'; font-size:24px;">${desenho}</span><br>`
 
         this.pOutUser__logged.innerHTML = response;
 
